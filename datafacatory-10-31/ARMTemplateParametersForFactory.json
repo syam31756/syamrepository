@@ -1,0 +1,99 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "datafacatory-10-31"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage3_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage4_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage5_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_password": {
+			"value": ""
+		},
+		"AzureSqlServerSyam2_password": {
+			"value": ""
+		},
+		"AzureSqlServersyam1_password": {
+			"value": ""
+		},
+		"Azuresqlservice_password": {
+			"value": ""
+		},
+		"linkedservice1_connectionString": {
+			"value": ""
+		},
+		"linkedservicesqlserver_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "r1rcm.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "binextgen"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "r1rcm"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"value": "r1rcm.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"value": "binextgen"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"value": "r1rcm"
+		},
+		"AzureSqlServerSyam2_properties_typeProperties_server": {
+			"value": "r1rcm.database.windows.net"
+		},
+		"AzureSqlServerSyam2_properties_typeProperties_database": {
+			"value": "Bimanual"
+		},
+		"AzureSqlServerSyam2_properties_typeProperties_userName": {
+			"value": "r1rcm"
+		},
+		"AzureSqlServersyam1_properties_typeProperties_server": {
+			"value": "r1rcm.database.windows.net"
+		},
+		"AzureSqlServersyam1_properties_typeProperties_database": {
+			"value": "binextgen"
+		},
+		"AzureSqlServersyam1_properties_typeProperties_userName": {
+			"value": "r1rcm"
+		},
+		"Azuresqlservice_properties_typeProperties_server": {
+			"value": "r1rcm.database.windows.net"
+		},
+		"Azuresqlservice_properties_typeProperties_database": {
+			"value": "binextgen"
+		},
+		"Azuresqlservice_properties_typeProperties_userName": {
+			"value": "r1rcm"
+		},
+		"linkedservicesqlserver_properties_typeProperties_server": {
+			"value": "r1rcm.database.windows.net"
+		},
+		"linkedservicesqlserver_properties_typeProperties_database": {
+			"value": "binextgen"
+		},
+		"linkedservicesqlserver_properties_typeProperties_userName": {
+			"value": "r1rcm"
+		}
+	}
+}

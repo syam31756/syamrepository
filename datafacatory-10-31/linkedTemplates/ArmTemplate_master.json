@@ -1,0 +1,252 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "datafacatory-10-31"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"AzureBlobStorage2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
+		},
+		"AzureBlobStorage3_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage3'"
+		},
+		"AzureBlobStorage4_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage4'"
+		},
+		"AzureBlobStorage5_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage5'"
+		},
+		"AzureSqlDatabase1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
+		},
+		"AzureSqlDatabase2_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase2'"
+		},
+		"AzureSqlServerSyam2_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlServerSyam2'"
+		},
+		"AzureSqlServersyam1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlServersyam1'"
+		},
+		"Azuresqlservice_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'Azuresqlservice'"
+		},
+		"linkedservice1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'linkedservice1'"
+		},
+		"linkedservicesqlserver_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'linkedservicesqlserver'"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "r1rcm.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "binextgen"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "r1rcm"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "r1rcm.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "binextgen"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "r1rcm"
+		},
+		"AzureSqlServerSyam2_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "r1rcm.database.windows.net"
+		},
+		"AzureSqlServerSyam2_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Bimanual"
+		},
+		"AzureSqlServerSyam2_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "r1rcm"
+		},
+		"AzureSqlServersyam1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "r1rcm.database.windows.net"
+		},
+		"AzureSqlServersyam1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "binextgen"
+		},
+		"AzureSqlServersyam1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "r1rcm"
+		},
+		"Azuresqlservice_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "r1rcm.database.windows.net"
+		},
+		"Azuresqlservice_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "binextgen"
+		},
+		"Azuresqlservice_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "r1rcm"
+		},
+		"linkedservicesqlserver_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "r1rcm.database.windows.net"
+		},
+		"linkedservicesqlserver_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "binextgen"
+		},
+		"linkedservicesqlserver_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "r1rcm"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "datafacatory-10-31_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"AzureBlobStorage2_connectionString": {
+						"value": "[parameters('AzureBlobStorage2_connectionString')]"
+					},
+					"AzureBlobStorage3_connectionString": {
+						"value": "[parameters('AzureBlobStorage3_connectionString')]"
+					},
+					"AzureBlobStorage4_connectionString": {
+						"value": "[parameters('AzureBlobStorage4_connectionString')]"
+					},
+					"AzureBlobStorage5_connectionString": {
+						"value": "[parameters('AzureBlobStorage5_connectionString')]"
+					},
+					"AzureSqlDatabase1_password": {
+						"value": "[parameters('AzureSqlDatabase1_password')]"
+					},
+					"AzureSqlDatabase2_password": {
+						"value": "[parameters('AzureSqlDatabase2_password')]"
+					},
+					"AzureSqlServerSyam2_password": {
+						"value": "[parameters('AzureSqlServerSyam2_password')]"
+					},
+					"AzureSqlServersyam1_password": {
+						"value": "[parameters('AzureSqlServersyam1_password')]"
+					},
+					"Azuresqlservice_password": {
+						"value": "[parameters('Azuresqlservice_password')]"
+					},
+					"linkedservice1_connectionString": {
+						"value": "[parameters('linkedservice1_connectionString')]"
+					},
+					"linkedservicesqlserver_password": {
+						"value": "[parameters('linkedservicesqlserver_password')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_userName')]"
+					},
+					"AzureSqlServerSyam2_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlServerSyam2_properties_typeProperties_server')]"
+					},
+					"AzureSqlServerSyam2_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlServerSyam2_properties_typeProperties_database')]"
+					},
+					"AzureSqlServerSyam2_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlServerSyam2_properties_typeProperties_userName')]"
+					},
+					"AzureSqlServersyam1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlServersyam1_properties_typeProperties_server')]"
+					},
+					"AzureSqlServersyam1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlServersyam1_properties_typeProperties_database')]"
+					},
+					"AzureSqlServersyam1_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlServersyam1_properties_typeProperties_userName')]"
+					},
+					"Azuresqlservice_properties_typeProperties_server": {
+						"value": "[parameters('Azuresqlservice_properties_typeProperties_server')]"
+					},
+					"Azuresqlservice_properties_typeProperties_database": {
+						"value": "[parameters('Azuresqlservice_properties_typeProperties_database')]"
+					},
+					"Azuresqlservice_properties_typeProperties_userName": {
+						"value": "[parameters('Azuresqlservice_properties_typeProperties_userName')]"
+					},
+					"linkedservicesqlserver_properties_typeProperties_server": {
+						"value": "[parameters('linkedservicesqlserver_properties_typeProperties_server')]"
+					},
+					"linkedservicesqlserver_properties_typeProperties_database": {
+						"value": "[parameters('linkedservicesqlserver_properties_typeProperties_database')]"
+					},
+					"linkedservicesqlserver_properties_typeProperties_userName": {
+						"value": "[parameters('linkedservicesqlserver_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
